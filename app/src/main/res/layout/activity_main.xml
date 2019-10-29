@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:background="@color/Activity_Main"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/navbar_background">
+
+        <ImageButton
+            android:id="@+id/addnotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toStartOf="@+id/notespage"
+            android:layout_toLeftOf="@+id/notespage"
+            app:srcCompat="@drawable/addnotes" />
+
+        <ImageButton
+            android:id="@+id/notespage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/notespage" />
+
+        <ImageButton
+            android:id="@+id/notessettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/notespage"
+            android:layout_toRightOf="@+id/notespage"
+            app:srcCompat="@drawable/notessettings" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+    <Button
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSave"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/entertitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter title:"
+        android:inputType="textPersonName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/toolbar"/>
+
+    <EditText
+        android:id="@+id/editSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entertitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:ems="18"
+        android:hint="Enter a subject here:"
+        android:inputType="textEmailSubject" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:ems="10"
+        android:layout_below="@+id/editSubject"
+        android:gravity="start|top"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:hint="Type your notes here"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textPrioritySelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:capitalize="words"
+        android:text="Priority level:" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_below="@+id/textPrioritySelection"
+        android:layout_marginTop="15dp"
+       >
+
+        <RadioButton
+            android:id="@+id/High"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="High" />
+
+        <RadioButton
+            android:id="@+id/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="Med." />
+
+        <RadioButton
+            android:id="@+id/Low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:text="Low" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>
