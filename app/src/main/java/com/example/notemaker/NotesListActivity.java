@@ -134,7 +134,7 @@ public class NotesListActivity extends AppCompatActivity {
      * Opens the NoteActivity(Blank) when the user clicks on the 'New Note' Button
      */
     private void initAddNoteButton(){
-        Button newContact = findViewById(R.id.buttonAdd);
+        ImageButton newContact = findViewById(R.id.ButtonAddNotes);
         newContact.setOnClickListener(new View.OnClickListener() {
 
 
@@ -172,7 +172,7 @@ public class NotesListActivity extends AppCompatActivity {
     }
 
     private void initNotesButton() {
-        ImageButton noteButton = findViewById(R.id.addnotes);
+        ImageButton noteButton = findViewById(R.id.ButtonNotesPage);
         noteButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -186,12 +186,12 @@ public class NotesListActivity extends AppCompatActivity {
 
     }
     private void initListButton(){
-        ImageButton listButton = findViewById(R.id.notespage);
+        ImageButton listButton = findViewById(R.id.ButtonAddNotes);
         listButton.setEnabled(false);
 
     }
     private void initSettingsButton(){
-        ImageButton settingButton = findViewById(R.id.notessettings);
+        ImageButton settingButton = findViewById(R.id.ButtonSettings);
         settingButton.setOnClickListener(new View.OnClickListener(){
 
             @Override

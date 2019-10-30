@@ -59,12 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initNotesButton() {
-        ImageButton noteButton = findViewById(R.id.addnotes);
+        ImageButton noteButton = findViewById(R.id.ButtonNotesPage);
         noteButton.setEnabled(false);
 
     }
     private void initListButton(){
-        ImageButton listButton = findViewById(R.id.notespage);
+        ImageButton listButton = findViewById(R.id.ButtonAddNotes);
         listButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void initSettingsButton(){
-        ImageButton settingButton = findViewById(R.id.notessettings);
+        ImageButton settingButton = findViewById(R.id.ButtonSettings);
         settingButton.setOnClickListener(new View.OnClickListener(){
 
             @Override

@@ -45,16 +45,16 @@ public class NotesAdapter extends ArrayAdapter<Notes> {
             }
 
             TextView noteName = v.findViewById(R.id.textNoteName);
-            TextView noteSubject = v.findViewById(R.id.textNoteSubject);
-            TextView noteBody = v.findViewById(R.id.textNoteBody);
-            TextView dateCreated = v.findViewById(R.id.dateCreated);
+            TextView noteSubject = v.findViewById(R.id.editSubject);
+            TextView noteBody = v.findViewById(R.id.textViewText);
+            TextView dateCreated = v.findViewById(R.id.viewDate);
 
             noteName.setText(note.getNoteName());
-            noteSubject.setText(note.getSubject());
+           noteSubject.setText(note.getSubject());
             noteBody.setText(note.getContent());
-            dateCreated.setText(DateFormat.format("MM/dd/yyyy", note.getDateCreated()));
+          dateCreated.setText(DateFormat.format("MM/dd/yyyy", note.getDateCreated()));
 
-            Button b = v.findViewById(R.id.buttonDeleteNote);
+            Button b = v.findViewById(R.id.buttonDelete);
             b.setVisibility(View.INVISIBLE);
 
 
@@ -67,7 +67,7 @@ public class NotesAdapter extends ArrayAdapter<Notes> {
     public void showDelete(final int position, final View convertView,
                            final Context context, final Notes note){
         View v = convertView;
-        final Button b = (Button) v.findViewById(R.id.buttonDeleteNote);
+        final Button b = (Button) v.findViewById(R.id.buttonDelete);
         if(b.getVisibility() == View.INVISIBLE) {
             b.setVisibility(View.VISIBLE);
             b.setOnClickListener(new View.OnClickListener() {
@@ -88,12 +88,12 @@ public class NotesAdapter extends ArrayAdapter<Notes> {
     public void showExpandedNote(final View convertView){
 
         View view = convertView;
-        final TextView noteContent = view.findViewById(R.id.textNoteBody);
+        final TextView noteContent = view.findViewById(R.id.textViewText);
         noteContent.setVisibility(View.VISIBLE);
     }
     public void closeExpandedNote(View convertView) {
         View view = convertView;
-        final TextView noteContent = view.findViewById(R.id.textNoteBody);
+        final TextView noteContent = view.findViewById(R.id.textViewText);
         noteContent.setVisibility(View.GONE);
     }
 
@@ -112,7 +112,7 @@ public class NotesAdapter extends ArrayAdapter<Notes> {
     }
     public void hideDelete(int position,View convertView, Context context) {
         View v = convertView;
-        final Button b = (Button) v.findViewById(R.id.buttonDeleteNote);
+        final Button b = (Button) v.findViewById(R.id.buttonDelete);
         b.setVisibility(View.INVISIBLE);
         b.setOnClickListener(null);
     }

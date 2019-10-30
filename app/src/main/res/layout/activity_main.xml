@@ -16,44 +16,47 @@
 
     </LinearLayout>
 
+    //NavBar
 
     <RelativeLayout
         android:id="@+id/navbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="77dp"
         android:layout_alignParentBottom="true"
         android:background="@color/navbar_background">
 
         <ImageButton
-            android:id="@+id/addnotes"
+            android:id="@+id/ButtonAddNotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            android:layout_toStartOf="@+id/notespage"
-            android:layout_toLeftOf="@+id/notespage"
-            app:srcCompat="@drawable/addnotes" />
+            android:layout_toStartOf="@+id/ButtonNotesPage"
+            android:layout_toLeftOf="@+id/ButtonNotesPage"
+            app:srcCompat="@drawable/listicon" />
 
         <ImageButton
-            android:id="@+id/notespage"
+            android:id="@+id/ButtonNotesPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/addicon" />
+
+        <ImageButton
+            android:id="@+id/ButtonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            app:srcCompat="@drawable/notespage" />
-
-        <ImageButton
-            android:id="@+id/notessettings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_toEndOf="@+id/notespage"
-            android:layout_toRightOf="@+id/notespage"
-            app:srcCompat="@drawable/notessettings" />
+            android:layout_toEndOf="@+id/ButtonNotesPage"
+            android:layout_toRightOf="@+id/ButtonNotesPage"
+            app:srcCompat="@drawable/settingicon" />
 
     </RelativeLayout>
+    //Nav Bar
+
     <RelativeLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -63,16 +66,23 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" >
 
-    <Button
-            android:text="Save"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="0dp">
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/viewDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonSave"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="20dp"
-            android:layout_marginEnd="20dp" />
+            android:layout_marginStart="-252dp"
+            android:layout_marginEnd="227dp"
+            android:ems="10"
+            android:inputType="date"
+            android:text="           Date" />
 
 
     </RelativeLayout>
@@ -81,37 +91,44 @@
         android:id="@+id/entertitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:hint="Enter title:"
-        android:inputType="textPersonName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_below="@+id/toolbar"/>
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editSubject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/entertitle"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="13dp"
         android:ems="18"
         android:hint="Enter a subject here:"
         android:inputType="textEmailSubject" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:ems="10"
+        android:layout_width="338dp"
+        android:layout_height="258dp"
         android:layout_below="@+id/editSubject"
-        android:gravity="start|top"
+        android:layout_centerInParent="true"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="-2dp"
+        android:ems="10"
+        android:gravity="start|top"
         android:hint="Type your notes here"
         android:inputType="textMultiLine"
         android:scrollbars="vertical"
@@ -119,30 +136,18 @@
         android:singleLine="false"
         android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textPrioritySelection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
-        android:capitalize="words"
-        android:text="Priority level:" />
-
     <RadioGroup
         android:id="@+id/radioGroupPriority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="115dp"
         android:orientation="horizontal"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_below="@+id/textPrioritySelection"
-        android:layout_marginTop="15dp"
-       >
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent">
 
         <RadioButton
             android:id="@+id/High"
@@ -155,7 +160,7 @@
         <RadioButton
             android:id="@+id/Medium"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="54dp"
             android:layout_weight="1"
             android:padding="2dp"
             android:text="Med." />
@@ -169,6 +174,14 @@
             android:text="Low" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Save" />
 
 
 </RelativeLayout>

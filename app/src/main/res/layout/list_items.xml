@@ -7,68 +7,57 @@
 
     <TextView
         android:id="@+id/textNoteName"
-        android:text="Note Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="5sp"
-        android:textColor="@color/system_blue"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/textNoteSubject"
-        android:text="none "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textNoteName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="15dp"
+        android:text="Note"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary" />
 
     <TextView
-        android:id="@+id/textNoteBody"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:visibility="gone"
-        android:text="@string/empty_note"
-        android:textColor="#000000"
-        android:textSize="20sp"
-
-        app:layout_constraintTop_toBottomOf="@+id/textNoteSubject"
-        tools:layout_editor_absoluteX="5dp"
-
-        />
-
-    <Button
-        android:id="@+id/buttonDeleteNote"
+        android:id="@+id/textViewText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textNoteName"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:text="delete"
-        android:visibility="invisible" />
+        android:text="text"
+        android:textSize="15dp" />
 
     <TextView
-        android:id="@+id/dateCreated"
+        android:id="@+id/textLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44sp"
-        android:layout_marginLeft="44sp"
-        android:layout_marginTop="3sp"
-        android:text="DATE"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDeleteNote"
-        app:layout_constraintHorizontal_bias="0.867"
-        app:layout_constraintStart_toEndOf="@+id/textNoteSubject"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignTop="@+id/textViewText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Priority"
+        android:textColor="@color/system_red"
+        android:textSize="20dp" />
+
+        <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        android:layout_alignBaseline="@+id/textNoteName"
+        />
 
 </RelativeLayout>
